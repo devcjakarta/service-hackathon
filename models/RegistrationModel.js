@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const timestamps = require('mongoose-timestamp')
 const Schema = mongoose.Schema
 
 const RegistrationSchema = new Schema({
@@ -23,6 +24,8 @@ const RegistrationSchema = new Schema({
     require: true
   }
 })
+
+RegistrationSchema.plugin(timestamps)
 
 const Registration = mongoose.model('users', RegistrationSchema)
 module.exports = Registration

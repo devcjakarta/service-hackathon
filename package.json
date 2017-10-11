@@ -15,7 +15,8 @@
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
-    "mongoose": "^4.11.12"
+    "mongoose": "^4.11.12",
+    "mongoose-timestamp": "^0.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
