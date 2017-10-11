@@ -5,7 +5,7 @@ const routers = require('./routers')
 const cors = require('cors')
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017/devcjakarta-hackathon')
+mongoose.connect('mongodb://localhost:27017/devcjakarta-hackathon', { useMongoClient: true })
 mongoose.Promise = global.Promise
 
 app.use(bodyParser.json())
