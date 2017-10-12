@@ -19,9 +19,14 @@ const RegistrationSchema = new Schema({
     type: String,
     require: true
   },
-  tech: {
+  url: {
     type: String,
     require: true
+  },
+  tech: {
+    type: String,
+    require: true,
+    enum: ["Facebook Stack", "Umum"]
   }
 })
 

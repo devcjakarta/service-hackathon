@@ -21,7 +21,6 @@ router.get('/users', (req, res) => {
 })
 
 router.post('/user', (req, res, next) => {
-  console.log(req.body)
   Registration.create(req.body)
     .then(() => res.send({
       data: [
@@ -30,6 +29,7 @@ router.post('/user', (req, res, next) => {
           email: req.body.email,
           phone: req.body.phone,
           title: req.body.title,
+          url: req.body.url,
           tech: req.body.tech
         }
       ],
