@@ -8,7 +8,7 @@ const app = express()
 mongoose.connect('mongodb://localhost:27017/devcjakarta-hackathon', { useMongoClient: true })
 mongoose.Promise = global.Promise
 
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use('/api/v1', routers)
 
